@@ -22,9 +22,18 @@ registers = {
         'pc': 0
     }
 
-    #Each element in array represents a 4 byte chunk (32 bits)
-    #Starts at memory location 0x2000 and ends at 0x3000
-    memory = [0] * 1024
+#Each element in array represents a 4 byte chunk (32 bits)
+#Starts at memory location 0x2000 and ends at 0x3000
+memory = [0] * 1024
+
+#Each entry refers to a tag name as well as the line it points to
+#Example: labelDict['loop1'] might have the value 3, which means the label 'loop1' refers to line 3 in instr_memory
+labelDict = {}
+
+#Each element represenets each line in assembly code
+#This excludes labels, tags, and empty lines
+#doing len(instr_memory) will give you the static instruction count of the program
+instr_memory = []
 
     #'options' variable for (reg1, reg2, imm)
 
@@ -68,42 +77,60 @@ def sw(options):
 
 def sb(options):
 
-def storeLabels(dict, asm):
+def initializeInstrMemory(instr_mem_array, labels_dict, asm):
     index = 0;
     for line in asm:
         line = line.strip();
+        if (line == ''):
+            continue
         if (line.count(":")):
-            dict[line[0:line.index(":")]] = index
-        index += 1
+            labels_dict[line[0:line.index(":")]] = index
+        else:
+            index += 1
+            instr_mem_array.append(line);
 
 class Instruction:
     func = {
-        'lui': lui
-        'ori': ori
-        'addi': addi
-        'multu': multu
-        'mfhi': mfhi
-        'mflo': mflo
-        'xor': xor
-        'bne': bne
-        'srl': srl
-        'andi': andi
-        'sll': sll
+        'lui': lui,
+        'ori': ori,
+        'addi': addi,
+        'multu': multu,
+        'mfhi': mfhi,
+        'mflo': mflo,
+        'xor': xor,
+        'bne': bne,
+        'srl': srl,
+        'andi': andi,
+        'sll': sll,
         'sw': sw
     }
+    def __init__(self, instrStr):
+        self.str = instrStr
+        instrParts = instrStr.split(' ', 1)
+        self.f_type = instrParts[0]
+        instrParts = instrParts[1].split(',')
+        for i in range(0,len(instrParts)):
+            instrParts[i] = instrParts[i].strip();
+        self.instrVals = instrParts
+    
+    def execute(self):
+        self.func[self.f_type](self.instrVals)
+
+    def toString(self):
+        return self.str;
 
 def main():
     f = open("output.txt","w+")
     h = open("testcase.asm","r")
-    labelDict = {}
     asm = h.readlines()
-    storeLabels(labelDict, asm)
-    # From previous homework, not to be used
-    # for line in asm:
-    #     instr = Instruction(line, labelDict)
-    #     string = instr.toString()
-    #     if string != 'InvalidInstruction':
-    #         f.write(hex(int(string,2)) + '\n');
+    initializeInstrMemory(instr_memory, labelDict, asm)
+    instrCount = len(instr_memory);
+    
+    while (registers['pc'] >> 2 < instrCount):
+        asmLine = instr_memory[registers['pc'] >> 2];
+        instr = Instruction(asmLine);
+        instr.execute();
+
 
 
 
