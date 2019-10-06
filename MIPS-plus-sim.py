@@ -26,30 +26,47 @@ registers = {
     #Starts at memory location 0x2000 and ends at 0x3000
     memory = [0] * 1024
 
-def lui():
+    #'options' variable for (reg1, reg2, imm)
 
-def ori():
+def lui(reg1, imm):
+    registers[reg1] = imm << 16
+    registers[reg2] = registers[reg1]|registers['$0']
 
-def addi(reg1, reg2, imm):
-    registers[reg1] = registers[reg2] + imm
+def ori(options):
+    registers[options[0]] = registers[options[1]]|options[2]
 
-def multu():
+def addi(options):
+    registers[options[0]] = registers[options[1]] + options[2]
 
-def mfhi():
+def multu(reg1,reg2):
+    registers['$lo']=registers[reg1]*registers[reg2]
 
-def mflo():
+def mfhi(reg1):
+    registers[reg1] = registers['$lo']
 
-def xor():
+def mflo(reg1):
+    registers[reg1] = registers['$hi']
 
-def bne():
+def xor(options):
+    registers[options[0]]= registers[options[1]] ^ registers[options[2]]
 
-def srl():
+def bne(reg1, reg2, loop):
+    
 
-def andi():
+def srl(options):
+    registers[options[0]] = registers[options[1]] >> options[2]
 
-def sll():
+def andi(options):
+    registers[options[0]]= registers[options[1]] & options[2]
 
-def sw():
+def sll(options):
+    registers[options[0]] = registers[options[1]] << options[2]
+
+def sw(options):
+    i = int(options[1]-0x2000)
+    registers[
+
+def sb(options):
 
 def storeLabels(dict, asm):
     index = 0;
