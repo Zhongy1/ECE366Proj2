@@ -37,50 +37,84 @@ instr_memory = []
 
 #'options' variable for (reg1, reg2, imm)
 
-def lui(reg1, imm):
-    registers[reg1] = imm << 16
-    registers[reg2] = registers[reg1]|registers['$0']
+def lui(options):
+    registers[options[0]] = (int(options[2], 16 if (options[2].count('x')) else 10) << 16) & (registers[options[0]] & 0xFFFF)
+    registers['pc'] += 4
 
 def ori(options):
-    registers[options[0]] = registers[options[1]]|options[2]
+    registers[options[0]] = registers[options[1]] | int(options[2], 16 if (options[2].count('x')) else 10)
+    registers['pc'] += 4
 
 def addi(options):
-    registers[options[0]] = registers[options[1]] + options[2]
+    registers[options[0]] = (registers[options[1]] + int(options[2], 16 if (options[2].count('x')) else 10)) & 0xFFFFFFFF
+    registers['pc'] += 4
 
-def multu(reg1,reg2):
-    registers['$lo']=registers[reg1]*registers[reg2]
+def multu(options):
+    product = registers[options[0]] * registers[options[1]]
+    registers['$lo'] = product & 0xFFFFFFFF
+    registers['$hi'] = (product >> 32) & 0xFFFFFFFF
+    registers['pc'] += 4
 
-def mfhi(reg1):
-    registers[reg1] = registers['$lo']
+def mfhi(options):
+    registers[options[0]] = registers['$hi']
+    registers['pc'] += 4
 
-def mflo(reg1):
-    registers[reg1] = registers['$hi']
+def mflo(options):
+    registers[options[0]] = registers['$lo']
+    registers['pc'] += 4
 
 def xor(options):
     registers[options[0]]= registers[options[1]] ^ registers[options[2]]
+    registers['pc'] += 4
 
-def bne(reg1, reg2):
-    if (options[0] == options[1]):
-        pc = pc + 4
+def bne(options):
+    if (registers[options[0]] == registers[options[1]]):
+        registers['pc'] += 4
     else:
-        labeldict[options[2]]
+        registers['pc'] = labelDict[options[2]] << 2
+
+def beq(options):
+    if (registers[options[0]] == registers[options[1]]):
+        registers['pc'] = labelDict[options[2]] << 2
+    else:
+        registers['pc'] += 4
 
 def srl(options):
-    registers[options[0]] = registers[options[1]] >> options[2]
+    registers[options[0]] = registers[options[1]] >> int(options[2], 16 if (options[2].count('x')) else 10)
+    registers['pc'] += 4
 
-def andii(options):
-    registers[options[0]]= registers[options[1]] & options[2]
+def andi(options):
+    registers[options[0]] = registers[options[1]] & int(options[2], 16 if (options[2].count('x')) else 10)
+    registers['pc'] += 4
 
 def sll(options):
-    registers[options[0]] = registers[options[1]] << options[2]
+    registers[options[0]] = (registers[options[1]] << int(options[2], 16 if (options[2].count('x')) else 10)) & 0xFFFFFFFF
+    registers['pc'] += 4
 
 def sw(options):
-    i = int(options[1]-0x2000)
-    registers[options[0]] = 
+    i = int(options[1], 16 if (options[1].count('x')) else 10) - 0x2000 + registers[options[2]]
+    memory[i] = registers[options[0]]
+    registers['pc'] += 4
+
+def lw(options):
+    i = int(options[1], 16 if (options[1].count('x')) else 10) - 0x2000 + registers[options[2]]
+    registers[options[0]] = memory[i]
+    registers['pc'] += 4
 
 def sb(options):
-    i = int(options[1]-0x2000)
-    registers[options[0]] = 
+    i = int(options[1], 16 if (options[1].count('x')) else 10) - 0x2000 + registers[options[2]]
+    chunk = int(i / 4)
+    offset = i % 4
+    toBeReplaced = memory[chunk] & (0xFF << offset * 8)
+    memory[chunk] = memory[chunk] ^ toBeReplaced ^ (registers[options[0]] << offset * 8)
+    registers['pc'] += 4
+
+def lb(options):
+    i = int(options[1], 16 if (options[1].count('x')) else 10) - 0x2000 + registers[options[2]]
+    chunk = int(i / 4)
+    offset = i % 4
+    registers[options[0]] = (memory[chunk] & (0xFF << offset * 8)) >> (offset * 8)
+    registers['pc'] += 4
 
 def initializeInstrMemory(instr_mem_array, labels_dict, asm):
     index = 0;
@@ -104,10 +138,14 @@ class Instruction:
         'mflo': mflo,
         'xor': xor,
         'bne': bne,
+        'beq': beq,
         'srl': srl,
         'andi': andi,
         'sll': sll,
-        'sw': sw
+        'sw': sw,
+        'lw': lw,
+        'sb': sb,
+        'lb': lb
     }
     def __init__(self, instrStr):
         self.str = instrStr
@@ -115,6 +153,12 @@ class Instruction:
         self.f_type = instrParts[0]
         instrParts = instrParts[1].split(',')
         for i in range(0,len(instrParts)):
+            if (instrParts[i].count('(')):
+                spec = instrParts[i]
+                instrParts.pop()
+                instrParts.append(spec[0:spec.index('(')].strip())
+                instrParts.append(spec[spec.index('(')+1:spec.index(')')].strip())
+                break
             instrParts[i] = instrParts[i].strip();
         self.instrVals = instrParts
     
@@ -135,6 +179,9 @@ def main():
         asmLine = instr_memory[registers['pc'] >> 2];
         instr = Instruction(asmLine);
         instr.execute();
+
+    print(memory)
+    print(registers['$16'])
 
 
 
