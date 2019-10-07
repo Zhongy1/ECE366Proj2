@@ -5,26 +5,7 @@
 	addi $17, $0, 100
 loopdi:
 	addi $9, $16, 1
-	
-hashion:
-	addi $11, $0, 0
-	addi $12, $0, 5
-	addi $13, $9, 0
-looper:
-	multu $13, $8
-	mfhi $14
-	mflo $15
-	xor $13, $14, $15
-	addi $11, $11, 1
-	bne $11, $12, looper
-	
-	srl $14, $13, 16
-	andi $15, $13, 0xFFFF
-	xor $13, $14, $15
-	srl $14, $13, 8
-	andi $15, $13, 0xFF
-	xor $10, $14, $15
-	
+	hash $10, $9, $8
 	sll $13, $16, 2
 	sw $10, 0x2020($13)
 	addi $16, $16, 1

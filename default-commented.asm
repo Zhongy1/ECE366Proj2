@@ -5,7 +5,9 @@
 	addi $17, $0, 100
 loopdi:
 	addi $9, $16, 1
-	
+# C = H(A, B)
+#inputs A = $9, B = $8
+#output C = $10
 hashion:
 	addi $11, $0, 0
 	addi $12, $0, 5
@@ -17,27 +19,27 @@ looper:
 	xor $13, $14, $15
 	addi $11, $11, 1
 	bne $11, $12, looper
-	
+	#end looper
 	srl $14, $13, 16
 	andi $15, $13, 0xFFFF
 	xor $13, $14, $15
 	srl $14, $13, 8
 	andi $15, $13, 0xFF
 	xor $10, $14, $15
-	
+	#end hashion
 	sll $13, $16, 2
 	sw $10, 0x2020($13)
 	addi $16, $16, 1
 	bne $16, $17, loopdi
-	
+	#end loopdi
 	sw $22, 0x2010($0)
 	sw $23, 0x2014($0)
 	
 	addi $16, $0, 0
 loopy:
-	sll $13, $16, 2
-	lw $14, 0x2020($13)
-	
+	sll $13, $16, 2 	#address offset
+	lw $14, 0x2020($13)	#value
+	#if $14 contains 5 consecutive 1's, increment $19 ($19 should be stored in 0x2008 at the end)
 	addi $11, $0, 0
 	addi $12, $0, 4
 	addi $21, $0, 0x1F
@@ -50,11 +52,11 @@ lo_op:
 skip2:
 	addi $11, $11, 1
 	bne $11, $12, lo_op
-	
+	#end lo_op
 exitlo_op:
 	
 	addi $16, $16, 1
 	bne $16, $17, loopy
-	
+	#end loopy
 	
 	sw $19, 0x2008($0)
