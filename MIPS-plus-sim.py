@@ -1,4 +1,5 @@
-
+# ECE 366 Project 2 Fall 2019
+# Group 7: Zhongy Chen, Chris Nyauchi, Claire Chappee
 registers = {
         '$0': 0,
         '$8': 0,
