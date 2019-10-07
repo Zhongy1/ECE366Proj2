@@ -18,9 +18,9 @@ registers = {
         '$21': 0,
         '$22': 0,
         '$23': 0,
-        'lo': 0,
+        'pc': 0,
         'hi': 0,
-        'pc': 0
+        'lo': 0
     }
 
 #Each element in array represents a 4 byte chunk (32 bits)
@@ -39,7 +39,9 @@ instr_memory = []
 #'options' variable for (reg1, reg2, imm)
 
 def lui(options):
-    registers[options[0]] = (int(options[2], 16 if (options[2].count('x')) else 10) << 16) & (registers[options[0]] & 0xFFFF)
+    registers[options[0]] = (int(options[1], 16 if (options[1].count('x')) else 10) << 16) | (registers[options[0]] & 0xFFFF)
+    if ((registers[options[0]] >> 31) & 0x1 == 1):
+        registers[options[0]] -= pow(2, 32)
     registers['pc'] += 4
 
 def ori(options):
@@ -51,21 +53,25 @@ def addi(options):
     registers['pc'] += 4
 
 def multu(options):
-    product = registers[options[0]] * registers[options[1]]
-    registers['$lo'] = product & 0xFFFFFFFF
-    registers['$hi'] = (product >> 32) & 0xFFFFFFFF
+    t1 = (registers[options[0]] + pow(2, 32) if (registers[options[0]] < 0) else registers[options[0]])
+    t2 = (registers[options[1]] + pow(2, 32) if (registers[options[1]] < 0) else registers[options[1]])
+    product = t1 * t2
+    registers['lo'] = product & 0xFFFFFFFF 
+    registers['lo'] -= (pow(2, 32) if ((registers['lo'] >> 31) & 0x1 == 1) else 0)
+    registers['hi'] = (product >> 32) & 0xFFFFFFFF
+    registers['hi'] -= (pow(2, 32) if ((registers['hi'] >> 31) & 0x1 == 1) else 0)
     registers['pc'] += 4
 
 def mfhi(options):
-    registers[options[0]] = registers['$hi']
+    registers[options[0]] = registers['hi']
     registers['pc'] += 4
 
 def mflo(options):
-    registers[options[0]] = registers['$lo']
+    registers[options[0]] = registers['lo']
     registers['pc'] += 4
 
 def xor(options):
-    registers[options[0]]= registers[options[1]] ^ registers[options[2]]
+    registers[options[0]] = (registers[options[1]] ^ registers[options[2]]) & 0xFFFFFFFF
     registers['pc'] += 4
 
 def bne(options):
@@ -84,6 +90,10 @@ def srl(options):
     registers[options[0]] = registers[options[1]] >> int(options[2], 16 if (options[2].count('x')) else 10)
     registers['pc'] += 4
 
+def srlv(options):
+    registers[options[0]] = registers[options[1]] >> registers[options[2]]
+    registers['pc'] += 4
+
 def andi(options):
     registers[options[0]] = registers[options[1]] & int(options[2], 16 if (options[2].count('x')) else 10)
     registers['pc'] += 4
@@ -94,12 +104,14 @@ def sll(options):
 
 def sw(options):
     i = int(options[1], 16 if (options[1].count('x')) else 10) - 0x2000 + registers[options[2]]
-    memory[i] = registers[options[0]]
+    chunk = int(i / 4)
+    memory[chunk] = registers[options[0]]
     registers['pc'] += 4
 
 def lw(options):
     i = int(options[1], 16 if (options[1].count('x')) else 10) - 0x2000 + registers[options[2]]
-    registers[options[0]] = memory[i]
+    chunk = int(i / 4)
+    registers[options[0]] = memory[chunk]
     registers['pc'] += 4
 
 def sb(options):
@@ -115,7 +127,15 @@ def lb(options):
     chunk = int(i / 4)
     offset = i % 4
     registers[options[0]] = (memory[chunk] & (0xFF << offset * 8)) >> (offset * 8)
+    registers[options[0]] = (0xFFFFFF00 if (registers[options[0]] & 0x80 == 0x80) else 0x0) | registers[options[0]]
     registers['pc'] += 4
+
+def hash(options):
+    a = options[1]
+    b = options[2]
+    #for i in range(0, 5):
+        
+    
 
 def initializeInstrMemory(instr_mem_array, labels_dict, asm):
     index = 0;
@@ -141,12 +161,14 @@ class Instruction:
         'bne': bne,
         'beq': beq,
         'srl': srl,
+        'srlv': srlv,
         'andi': andi,
         'sll': sll,
         'sw': sw,
         'lw': lw,
         'sb': sb,
-        'lb': lb
+        'lb': lb,
+        'hash': hash
     }
     def __init__(self, instrStr):
         self.str = instrStr
@@ -171,19 +193,20 @@ class Instruction:
 
 def main():
     f = open("output.txt","w+")
-    h = open("testcase.asm","r")
+    h = open("Hash-MIPS-default.asm","r")
     asm = h.readlines()
     initializeInstrMemory(instr_memory, labelDict, asm)
     instrCount = len(instr_memory);
-    
+    dynamInstrCount = 0;
     while (registers['pc'] >> 2 < instrCount):
         asmLine = instr_memory[registers['pc'] >> 2];
         instr = Instruction(asmLine);
         instr.execute();
+        dynamInstrCount += 1
 
     print(memory)
-    print(registers['$16'])
-
+    print(registers)
+    print(dynamInstrCount)
 
 
 
