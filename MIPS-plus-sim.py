@@ -35,7 +35,7 @@ labelDict = {}
 #doing len(instr_memory) will give you the static instruction count of the program
 instr_memory = []
 
-    #'options' variable for (reg1, reg2, imm)
+#'options' variable for (reg1, reg2, imm)
 
 def lui(reg1, imm):
     registers[reg1] = imm << 16
@@ -59,13 +59,16 @@ def mflo(reg1):
 def xor(options):
     registers[options[0]]= registers[options[1]] ^ registers[options[2]]
 
-def bne(reg1, reg2, loop):
-    
+def bne(reg1, reg2):
+    if (options[0] == options[1]):
+        pc = pc + 4
+    else:
+        labeldict[options[2]]
 
 def srl(options):
     registers[options[0]] = registers[options[1]] >> options[2]
 
-def andi(options):
+def andii(options):
     registers[options[0]]= registers[options[1]] & options[2]
 
 def sll(options):
@@ -73,9 +76,11 @@ def sll(options):
 
 def sw(options):
     i = int(options[1]-0x2000)
-    registers[
+    registers[options[0]] = 
 
 def sb(options):
+    i = int(options[1]-0x2000)
+    registers[options[0]] = 
 
 def initializeInstrMemory(instr_mem_array, labels_dict, asm):
     index = 0;
