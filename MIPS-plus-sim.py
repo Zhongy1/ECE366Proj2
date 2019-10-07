@@ -192,8 +192,10 @@ class Instruction:
         return self.str
 
 def main():
-    f = open("output.txt","w+")
+    f = open("outputpy.txt","w+")
     h = open("Hash-MIPS-default.asm","r")
+    b = open("outputasm.txt","w+")
+    g = open("testcase.asm","r")
     asm = h.readlines()
     initializeInstrMemory(instr_memory, labelDict, asm)
     instrCount = len(instr_memory)

@@ -1,5 +1,3 @@
-; ECE 366 Project 2 Fall 2019
-; Group 7: Zhongy Chen, Chris Nyauchi, Claire Chappee
 	lui $8, 0xFA19
 	ori $8, $8, 0xE366
 
