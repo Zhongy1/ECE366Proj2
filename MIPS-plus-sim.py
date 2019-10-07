@@ -138,16 +138,16 @@ def hash(options):
     
 
 def initializeInstrMemory(instr_mem_array, labels_dict, asm):
-    index = 0;
+    index = 0
     for line in asm:
-        line = line.strip();
+        line = line.strip()
         if (line == ''):
             continue
         if (line.count(":")):
             labels_dict[line[0:line.index(":")]] = index
         else:
             index += 1
-            instr_mem_array.append(line);
+            instr_mem_array.append(line)
 
 class Instruction:
     func = {
@@ -182,26 +182,26 @@ class Instruction:
                 instrParts.append(spec[0:spec.index('(')].strip())
                 instrParts.append(spec[spec.index('(')+1:spec.index(')')].strip())
                 break
-            instrParts[i] = instrParts[i].strip();
+            instrParts[i] = instrParts[i].strip()
         self.instrVals = instrParts
     
     def execute(self):
         self.func[self.f_type](self.instrVals)
 
     def toString(self):
-        return self.str;
+        return self.str
 
 def main():
     f = open("output.txt","w+")
     h = open("Hash-MIPS-default.asm","r")
     asm = h.readlines()
     initializeInstrMemory(instr_memory, labelDict, asm)
-    instrCount = len(instr_memory);
-    dynamInstrCount = 0;
+    instrCount = len(instr_memory)
+    dynamInstrCount = 0
     while (registers['pc'] >> 2 < instrCount):
-        asmLine = instr_memory[registers['pc'] >> 2];
-        instr = Instruction(asmLine);
-        instr.execute();
+        asmLine = instr_memory[registers['pc'] >> 2]
+        instr = Instruction(asmLine)
+        instr.execute()
         dynamInstrCount += 1
 
     print(memory)
@@ -211,4 +211,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main();
+    main()
