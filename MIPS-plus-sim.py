@@ -235,8 +235,7 @@ def main():
     print(dynamInstrCount)
     print('****************************************************')
     print('The memory contents of 0x2000 - 0x2050 are:')
-    print(memory[50])
-    print(memory)
+    pprint.pprint(memory[0:199])
     print('****************************************************')
 
 
