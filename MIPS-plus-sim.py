@@ -40,8 +40,7 @@ instr_memory = []
 
 def lui(options):
     registers[options[0]] = (int(options[1], 16 if (options[1].count('x')) else 10) << 16) | (registers[options[0]] & 0xFFFF)
-    if ((registers[options[0]] >> 31) & 0x1 == 1):
-        registers[options[0]] -= pow(2, 32)
+    registers[options[0]] -= pow(2, 32) if ((registers[options[0]] >> 31) & 0x1 == 1) else 0
     registers['pc'] += 4
 
 def ori(options):
@@ -50,11 +49,12 @@ def ori(options):
 
 def addi(options):
     registers[options[0]] = (registers[options[1]] + int(options[2], 16 if (options[2].count('x')) else 10)) & 0xFFFFFFFF
+    registers[options[0]] -= pow(2, 32) if ((registers[options[0]] >> 31) & 0x1 == 1) else 0
     registers['pc'] += 4
 
 def multu(options):
-    t1 = (registers[options[0]] + pow(2, 32) if (registers[options[0]] < 0) else registers[options[0]])
-    t2 = (registers[options[1]] + pow(2, 32) if (registers[options[1]] < 0) else registers[options[1]])
+    t1 = registers[options[0]] & 0xFFFFFFFF
+    t2 = registers[options[1]] & 0xFFFFFFFF
     product = t1 * t2
     registers['lo'] = product & 0xFFFFFFFF 
     registers['lo'] -= (pow(2, 32) if ((registers['lo'] >> 31) & 0x1 == 1) else 0)
@@ -120,6 +120,7 @@ def sb(options):
     offset = i % 4
     toBeReplaced = memory[chunk] & (0xFF << offset * 8)
     memory[chunk] = memory[chunk] ^ toBeReplaced ^ (registers[options[0]] << offset * 8)
+    memory[chunk] -= pow(2, 32) if ((memory[chunk] >> 31) & 0x1 == 1) else 0
     registers['pc'] += 4
 
 def lb(options):
@@ -131,9 +132,16 @@ def lb(options):
     registers['pc'] += 4
 
 def hash(options):
-    a = options[1]
-    b = options[2]
-    #for i in range(0, 5):
+    a = registers[options[1]] & 0xFFFFFFFF
+    b = registers[options[2]] & 0xFFFFFFFF
+    for i in range(0, 5):
+        product = a * b
+        hi = product & 0xFFFFFFFF
+        lo = (product >> 32) & 0xFFFFFFFF
+        a = hi ^ lo
+    c = (a & 0xFFFF) ^ ((a >> 16) & 0xFFFF)
+    registers[options[0]] = (c & 0xFF) ^ ((c >> 8) & 0xFF)
+    registers['pc'] += 4
         
     
 
@@ -193,7 +201,7 @@ class Instruction:
 
 def main():
     f = open("output.txt","w+")
-    h = open("Hash-MIPS-default.asm","r")
+    h = open("Hash-MIPS-plus.asm","r")
     asm = h.readlines()
     initializeInstrMemory(instr_memory, labelDict, asm)
     instrCount = len(instr_memory)
