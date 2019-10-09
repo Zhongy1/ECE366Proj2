@@ -1,5 +1,3 @@
-; ECE 366 Project 2 Fall 2019
-; Group 7: Zhongy Chen, Chris Nyauchi, Claire Chappee
 	addi $8, $0, 0
 	addi $9, $0, 255
 loop1:
