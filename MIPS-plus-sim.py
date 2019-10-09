@@ -1,5 +1,6 @@
 # ECE 366 Project 2 Fall 2019
 # Group 7: Zhongy Chen, Chris Nyauchi, Claire Chappee
+import pprint
 registers = {
         '$0': 0,
         '$8': 0,
@@ -194,9 +195,11 @@ class Instruction:
 def main():
     f = open("outputpy.txt","w+")
     h = open("Hash-MIPS-default.asm","r")
-    b = open("outputasm.txt","w+")
-    g = open("testcase.asm","r")
-    asm = h.readlines()
+    f2 = open("outputasm.txt","w+")
+    h2 = open("testcase.asm","r")
+    f3 = open("outputplusasm.txt","w+")
+    h3 = open("Hash-MIPS-plus.asm","r")
+    asm = h.readlines() 
     initializeInstrMemory(instr_memory, labelDict, asm)
     instrCount = len(instr_memory)
     dynamInstrCount = 0
@@ -206,9 +209,36 @@ def main():
         instr.execute()
         dynamInstrCount += 1
 
-    print(memory)
-    print(registers)
+    print('ECE 366 Project 2')
+    print('Created by: Zhongy Chen, Chris Nyauchi, and Claire Chappee')
+    print('****************************************************')
+    print('The values in registers $8 - $23 are:')
+    print('$8', registers['$8'])
+    print('$9',registers['$8'])
+    print('$10',registers['$9'])
+    print('$11',registers['$10'])
+    print('$12',registers['$11'])
+    print('$13',registers['$12'])
+    print('$14',registers['$13'])
+    print('$15',registers['$14'])
+    print('$16',registers['$15'])
+    print('$17',registers['$16'])
+    print('$18',registers['$17'])
+    print('$19',registers['$18'])
+    print('$20',registers['$19'])
+    print('$21',registers['$20'])
+    print('$22',registers['$21'])
+    print('$23',registers['$22'])
+    print('$24',registers['$23'])
+    print('****************************************************')
+    print('The dynamic instruction count is:')
     print(dynamInstrCount)
+    print('****************************************************')
+    print('The memory contents of 0x2000 - 0x2050 are:')
+    print(memory[50])
+    print(memory)
+    print('****************************************************')
+
 
 
 
