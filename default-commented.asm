@@ -32,8 +32,6 @@ looper:
 	addi $16, $16, 1
 	bne $16, $17, loopdi
 	#end loopdi
-	sw $22, 0x2010($0)
-	sw $23, 0x2014($0)
 	
 	addi $16, $0, 0
 loopy:
