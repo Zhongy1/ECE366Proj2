@@ -1,0 +1,5026 @@
+Instruction: lui $8, 0xFA19
+	Change $8 to -99024896
+	PC: 0 --> 4
+Instruction: ori $8, $8, 0xE366
+	Change $8 to -98966682
+	PC: 4 --> 8
+Instruction: addi $16, $0, 4
+	Change $16 to 4
+	PC: 8 --> 12
+Instruction: addi $17, $0, 404
+	Change $17 to 404
+	PC: 12 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 1
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 142
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 142 to memory location 0x201C + 4
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 8
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	8 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 2
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 81
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 81 to memory location 0x201C + 8
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 12
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	12 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 3
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 205
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 205 to memory location 0x201C + 12
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 16
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	16 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 4
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 154
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 154 to memory location 0x201C + 16
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 20
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	20 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 5
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 52
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 52 to memory location 0x201C + 20
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 24
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	24 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 6
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 216
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 216 to memory location 0x201C + 24
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 28
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	28 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 7
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 173
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 173 to memory location 0x201C + 28
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 32
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	32 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 8
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 33
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 33 to memory location 0x201C + 32
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 36
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	36 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 9
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 110
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 110 to memory location 0x201C + 36
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 40
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	40 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 10
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 196
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 196 to memory location 0x201C + 40
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 44
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	44 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 11
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 133
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 133 to memory location 0x201C + 44
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 48
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	48 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 12
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 210
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 210 to memory location 0x201C + 48
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 52
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	52 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 13
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 241
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 241 to memory location 0x201C + 52
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 56
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	56 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 14
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 223
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 223 to memory location 0x201C + 56
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 60
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	60 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 15
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 227
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 227 to memory location 0x201C + 60
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 64
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	64 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 16
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 244
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 244 to memory location 0x201C + 64
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 68
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	68 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 17
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 124
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 124 to memory location 0x201C + 68
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 72
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	72 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 18
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 32
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 32 to memory location 0x201C + 72
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 76
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	76 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 19
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 46
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 46 to memory location 0x201C + 76
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 80
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	80 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 20
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 22
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 22 to memory location 0x201C + 80
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 84
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	84 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 21
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 141
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 141 to memory location 0x201C + 84
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 88
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	88 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 22
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 77
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 77 to memory location 0x201C + 88
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 92
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	92 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 23
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 174
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 174 to memory location 0x201C + 92
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 96
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	96 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 24
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 114
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 114 to memory location 0x201C + 96
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 100
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	100 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 25
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 10
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 10 to memory location 0x201C + 100
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 104
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	104 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 26
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 23
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 23 to memory location 0x201C + 104
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 108
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	108 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 27
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 122
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 122 to memory location 0x201C + 108
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 112
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	112 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 28
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 52
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 52 to memory location 0x201C + 112
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 116
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	116 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 29
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 88
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 88 to memory location 0x201C + 116
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 120
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	120 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 30
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 131
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 131 to memory location 0x201C + 120
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 124
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	124 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 31
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 187
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 187 to memory location 0x201C + 124
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 128
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	128 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 32
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 179
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 179 to memory location 0x201C + 128
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 132
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	132 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 33
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 216
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 216 to memory location 0x201C + 132
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 136
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	136 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 34
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 221
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 221 to memory location 0x201C + 136
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 140
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	140 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 35
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 67
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 67 to memory location 0x201C + 140
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 144
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	144 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 36
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 159
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 159 to memory location 0x201C + 144
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 148
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	148 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 37
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 121
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 121 to memory location 0x201C + 148
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 152
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	152 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 38
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 20
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 20 to memory location 0x201C + 152
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 156
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	156 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 39
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 159
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 159 to memory location 0x201C + 156
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 160
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	160 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 40
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 223
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 223 to memory location 0x201C + 160
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 164
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	164 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 41
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 249
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 249 to memory location 0x201C + 164
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 168
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	168 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 42
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 254
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 254 to memory location 0x201C + 168
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 172
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	172 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 43
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 8
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 8 to memory location 0x201C + 172
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 176
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	176 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 44
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 125
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 125 to memory location 0x201C + 176
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 180
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	180 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 45
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 240
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 240 to memory location 0x201C + 180
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 184
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	184 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 46
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 235
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 235 to memory location 0x201C + 184
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 188
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	188 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 47
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 103
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 103 to memory location 0x201C + 188
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 192
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	192 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 48
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 44
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 44 to memory location 0x201C + 192
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 196
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	196 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 49
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 143
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 143 to memory location 0x201C + 196
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 200
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	200 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 50
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 136
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 136 to memory location 0x201C + 200
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 204
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	204 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 51
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 30
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 30 to memory location 0x201C + 204
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 208
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	208 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 52
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 165
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 165 to memory location 0x201C + 208
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 212
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	212 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 53
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 101
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 101 to memory location 0x201C + 212
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 216
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	216 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 54
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 215
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 215 to memory location 0x201C + 216
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 220
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	220 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 55
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 195
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 195 to memory location 0x201C + 220
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 224
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	224 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 56
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 149
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 149 to memory location 0x201C + 224
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 228
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	228 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 57
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 95
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 95 to memory location 0x201C + 228
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 232
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	232 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 58
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 235
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 235 to memory location 0x201C + 232
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 236
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	236 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 59
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 103
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 103 to memory location 0x201C + 236
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 240
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	240 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 60
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 141
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 141 to memory location 0x201C + 240
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 244
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	244 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 61
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 239
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 239 to memory location 0x201C + 244
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 248
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	248 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 62
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 20
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 20 to memory location 0x201C + 248
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 252
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	252 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 63
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 139
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 139 to memory location 0x201C + 252
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 256
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	256 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 64
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 252
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 252 to memory location 0x201C + 256
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 260
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	260 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 65
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 15
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 15 to memory location 0x201C + 260
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 264
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	264 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 66
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 191
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 191 to memory location 0x201C + 264
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 268
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	268 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 67
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 23
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 23 to memory location 0x201C + 268
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 272
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	272 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 68
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 124
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 124 to memory location 0x201C + 272
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 276
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	276 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 69
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 14
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 14 to memory location 0x201C + 276
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 280
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	280 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 70
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 229
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 229 to memory location 0x201C + 280
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 284
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	284 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 71
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 39
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 39 to memory location 0x201C + 284
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 288
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	288 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 72
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 174
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 174 to memory location 0x201C + 288
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 292
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	292 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 73
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 164
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 164 to memory location 0x201C + 292
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 296
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	296 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 74
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 242
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 242 to memory location 0x201C + 296
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 300
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	300 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 75
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 47
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 47 to memory location 0x201C + 300
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 304
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	304 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 76
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 252
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 252 to memory location 0x201C + 304
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 308
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	308 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 77
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 105
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 105 to memory location 0x201C + 308
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 312
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	312 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 78
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 210
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 210 to memory location 0x201C + 312
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 316
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	316 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 79
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 181
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 181 to memory location 0x201C + 316
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 320
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	320 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 80
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 56
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 56 to memory location 0x201C + 320
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 324
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	324 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 81
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 78
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 78 to memory location 0x201C + 324
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 328
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	328 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 82
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 38
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 38 to memory location 0x201C + 328
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 332
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	332 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 83
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 106
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 106 to memory location 0x201C + 332
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 336
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	336 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 84
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 70
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 70 to memory location 0x201C + 336
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 340
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	340 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 85
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 209
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 209 to memory location 0x201C + 340
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 344
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	344 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 86
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 162
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 162 to memory location 0x201C + 344
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 348
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	348 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 87
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 5
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 5 to memory location 0x201C + 348
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 352
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	352 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 88
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 32
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 32 to memory location 0x201C + 352
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 356
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	356 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 89
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 154
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 154 to memory location 0x201C + 356
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 360
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	360 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 90
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 172
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 172 to memory location 0x201C + 360
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 364
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	364 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 91
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 166
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 166 to memory location 0x201C + 364
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 368
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	368 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 92
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 61
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 61 to memory location 0x201C + 368
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 372
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	372 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 93
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 45
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 45 to memory location 0x201C + 372
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 376
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	376 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 94
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 203
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 203 to memory location 0x201C + 376
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 380
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	380 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 95
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 170
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 170 to memory location 0x201C + 380
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 384
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	384 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 96
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 51
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 51 to memory location 0x201C + 384
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 388
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	388 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 97
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 213
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 213 to memory location 0x201C + 388
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 392
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	392 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 98
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 39
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 39 to memory location 0x201C + 392
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 396
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	396 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 99
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 225
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 225 to memory location 0x201C + 396
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 400
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	400 is not equal to 404
+	PC: 32 --> 16
+Instruction: srl $9, $16, 2
+	Change $9 to 100
+	PC: 16 --> 20
+Instruction: hash $10, $9, $8
+*** Special Instruction ***
+	$10 = H($9, $8)
+	$10 = 170
+	PC: 20 --> 24
+Instruction: sw $10, 0x201C($16)
+	Move 170 to memory location 0x201C + 400
+	PC: 24 --> 28
+Instruction: addi $16, $16, 4
+	Change $16 to 404
+	PC: 28 --> 32
+Instruction: bne $16, $17, loopdi
+	404 is equal to 404
+	PC: 32 --> 36
+Instruction: addi $16, $0, 0
+	Change $16 to 0
+	PC: 36 --> 40
+Instruction: addi $17, $0, 400
+	Change $17 to 400
+	PC: 40 --> 44
+Instruction: addi $12, $0, 4
+	Change $12 to 4
+	PC: 44 --> 48
+Instruction: addi $21, $0, 0x1F
+	Change $21 to 31
+	PC: 48 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 142 to $14 from memory location 0x2020 + 0
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 14
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	14 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 71
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	71 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 35
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	35 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 17
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	17 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 4
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	4 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 81 to $14 from memory location 0x2020 + 4
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 17
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	17 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 40
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	40 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 20
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	20 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 10
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	10 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 8
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	8 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 205 to $14 from memory location 0x2020 + 8
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 13
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	13 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 102
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	102 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 51
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	51 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 25
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	25 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 12
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	12 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 154 to $14 from memory location 0x2020 + 12
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 26
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	26 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 77
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	77 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 38
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	38 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 19
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	19 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 16
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	16 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 52 to $14 from memory location 0x2020 + 16
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 20
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	20 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 26
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	26 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 13
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	13 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 6
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	6 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 20
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	20 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 216 to $14 from memory location 0x2020 + 20
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 24
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	24 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 108
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	108 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 54
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	54 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 27
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	27 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 24
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	24 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 173 to $14 from memory location 0x2020 + 24
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 13
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	13 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 86
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	86 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 43
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	43 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 21
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	21 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 28
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	28 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 33 to $14 from memory location 0x2020 + 28
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 1
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	1 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 16
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	16 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 8
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	8 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 4
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	4 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 32
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	32 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 110 to $14 from memory location 0x2020 + 32
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 14
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	14 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 55
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	55 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 27
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	27 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 13
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	13 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 36
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	36 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 196 to $14 from memory location 0x2020 + 36
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 4
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	4 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 98
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	98 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 49
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	49 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 24
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	24 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 40
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	40 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 133 to $14 from memory location 0x2020 + 40
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 5
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	5 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 66
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	66 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 33
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	33 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 16
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	16 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 44
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	44 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 210 to $14 from memory location 0x2020 + 44
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 18
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	18 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 105
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	105 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 52
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	52 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 26
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	26 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 48
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	48 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 241 to $14 from memory location 0x2020 + 48
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 17
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	17 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 120
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	120 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 60
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	60 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 30
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	30 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 52
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	52 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 223 to $14 from memory location 0x2020 + 52
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 31
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	31 is equal to 31
+	PC: 60 --> 64
+Instruction: addi $19, $19, 1
+	Change $19 to 1
+	PC: 64 --> 68
+Instruction: bne $19, $0, finish
+	1 is not equal to 0
+	PC: 68 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 56
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	56 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 227 to $14 from memory location 0x2020 + 56
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 3
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	3 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 113
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	113 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 56
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	56 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 28
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	28 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 60
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	60 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 244 to $14 from memory location 0x2020 + 60
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 20
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	20 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 122
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	122 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 61
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	61 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 30
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	30 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 64
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	64 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 124 to $14 from memory location 0x2020 + 64
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 28
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	28 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 62
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	62 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 31
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	31 is equal to 31
+	PC: 92 --> 96
+Instruction: addi $19, $19, 1
+	Change $19 to 2
+	PC: 96 --> 100
+Instruction: bne $19, $0, finish
+	2 is not equal to 0
+	PC: 100 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 68
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	68 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 32 to $14 from memory location 0x2020 + 68
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 0
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	0 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 16
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	16 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 8
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	8 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 4
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	4 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 72
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	72 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 46 to $14 from memory location 0x2020 + 72
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 14
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	14 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 23
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	23 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 11
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	11 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 5
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	5 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 76
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	76 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 22 to $14 from memory location 0x2020 + 76
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 22
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	22 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 11
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	11 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 5
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	5 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 2
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	2 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 80
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	80 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 141 to $14 from memory location 0x2020 + 80
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 13
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	13 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 70
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	70 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 35
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	35 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 17
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	17 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 84
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	84 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 77 to $14 from memory location 0x2020 + 84
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 13
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	13 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 38
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	38 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 19
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	19 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 9
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	9 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 88
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	88 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 174 to $14 from memory location 0x2020 + 88
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 14
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	14 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 87
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	87 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 43
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	43 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 21
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	21 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 92
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	92 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 114 to $14 from memory location 0x2020 + 92
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 18
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	18 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 57
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	57 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 28
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	28 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 14
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	14 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 96
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	96 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 10 to $14 from memory location 0x2020 + 96
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 10
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	10 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 5
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	5 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 2
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	2 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 1
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	1 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 100
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	100 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 23 to $14 from memory location 0x2020 + 100
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 23
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	23 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 11
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	11 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 5
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	5 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 2
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	2 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 104
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	104 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 122 to $14 from memory location 0x2020 + 104
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 26
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	26 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 61
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	61 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 30
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	30 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 15
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	15 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 108
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	108 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 52 to $14 from memory location 0x2020 + 108
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 20
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	20 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 26
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	26 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 13
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	13 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 6
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	6 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 112
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	112 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 88 to $14 from memory location 0x2020 + 112
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 24
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	24 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 44
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	44 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 22
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	22 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 11
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	11 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 116
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	116 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 131 to $14 from memory location 0x2020 + 116
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 3
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	3 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 65
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	65 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 32
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	32 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 16
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	16 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 120
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	120 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 187 to $14 from memory location 0x2020 + 120
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 27
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	27 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 93
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	93 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 46
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	46 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 23
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	23 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 124
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	124 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 179 to $14 from memory location 0x2020 + 124
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 19
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	19 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 89
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	89 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 44
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	44 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 22
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	22 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 128
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	128 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 216 to $14 from memory location 0x2020 + 128
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 24
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	24 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 108
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	108 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 54
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	54 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 27
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	27 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 132
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	132 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 221 to $14 from memory location 0x2020 + 132
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 29
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	29 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 110
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	110 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 55
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	55 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 27
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	27 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 136
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	136 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 67 to $14 from memory location 0x2020 + 136
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 3
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	3 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 33
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	33 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 16
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	16 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 8
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	8 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 140
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	140 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 159 to $14 from memory location 0x2020 + 140
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 31
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	31 is equal to 31
+	PC: 60 --> 64
+Instruction: addi $19, $19, 1
+	Change $19 to 3
+	PC: 64 --> 68
+Instruction: bne $19, $0, finish
+	3 is not equal to 0
+	PC: 68 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 144
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	144 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 121 to $14 from memory location 0x2020 + 144
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 25
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	25 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 60
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	60 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 30
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	30 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 15
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	15 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 148
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	148 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 20 to $14 from memory location 0x2020 + 148
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 20
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	20 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 10
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	10 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 5
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	5 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 2
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	2 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 152
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	152 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 159 to $14 from memory location 0x2020 + 152
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 31
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	31 is equal to 31
+	PC: 60 --> 64
+Instruction: addi $19, $19, 1
+	Change $19 to 4
+	PC: 64 --> 68
+Instruction: bne $19, $0, finish
+	4 is not equal to 0
+	PC: 68 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 156
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	156 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 223 to $14 from memory location 0x2020 + 156
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 31
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	31 is equal to 31
+	PC: 60 --> 64
+Instruction: addi $19, $19, 1
+	Change $19 to 5
+	PC: 64 --> 68
+Instruction: bne $19, $0, finish
+	5 is not equal to 0
+	PC: 68 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 160
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	160 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 249 to $14 from memory location 0x2020 + 160
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 25
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	25 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 124
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	124 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 62
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	62 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 31
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	31 is equal to 31
+	PC: 108 --> 112
+Instruction: addi $19, $19, 1
+	Change $19 to 6
+	PC: 112 --> 116
+Instruction: bne $19, $0, finish
+	6 is not equal to 0
+	PC: 116 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 164
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	164 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 254 to $14 from memory location 0x2020 + 164
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 30
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	30 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 127
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	127 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 63
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	63 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 31
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	31 is equal to 31
+	PC: 108 --> 112
+Instruction: addi $19, $19, 1
+	Change $19 to 7
+	PC: 112 --> 116
+Instruction: bne $19, $0, finish
+	7 is not equal to 0
+	PC: 116 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 168
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	168 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 8 to $14 from memory location 0x2020 + 168
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 8
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	8 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 4
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	4 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 2
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	2 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 1
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	1 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 172
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	172 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 125 to $14 from memory location 0x2020 + 172
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 29
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	29 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 62
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	62 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 31
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	31 is equal to 31
+	PC: 92 --> 96
+Instruction: addi $19, $19, 1
+	Change $19 to 8
+	PC: 96 --> 100
+Instruction: bne $19, $0, finish
+	8 is not equal to 0
+	PC: 100 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 176
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	176 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 240 to $14 from memory location 0x2020 + 176
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 16
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	16 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 120
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	120 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 60
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	60 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 30
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	30 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 180
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	180 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 235 to $14 from memory location 0x2020 + 180
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 11
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	11 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 117
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	117 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 58
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	58 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 29
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	29 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 184
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	184 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 103 to $14 from memory location 0x2020 + 184
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 7
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	7 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 51
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	51 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 25
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	25 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 12
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	12 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 188
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	188 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 44 to $14 from memory location 0x2020 + 188
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 12
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	12 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 22
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	22 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 11
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	11 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 5
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	5 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 192
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	192 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 143 to $14 from memory location 0x2020 + 192
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 15
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	15 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 71
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	71 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 35
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	35 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 17
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	17 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 196
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	196 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 136 to $14 from memory location 0x2020 + 196
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 8
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	8 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 68
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	68 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 34
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	34 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 17
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	17 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 200
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	200 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 30 to $14 from memory location 0x2020 + 200
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 30
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	30 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 15
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	15 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 7
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	7 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 3
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	3 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 204
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	204 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 165 to $14 from memory location 0x2020 + 204
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 5
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	5 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 82
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	82 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 41
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	41 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 20
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	20 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 208
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	208 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 101 to $14 from memory location 0x2020 + 208
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 5
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	5 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 50
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	50 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 25
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	25 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 12
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	12 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 212
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	212 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 215 to $14 from memory location 0x2020 + 212
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 23
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	23 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 107
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	107 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 53
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	53 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 26
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	26 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 216
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	216 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 195 to $14 from memory location 0x2020 + 216
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 3
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	3 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 97
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	97 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 48
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	48 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 24
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	24 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 220
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	220 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 149 to $14 from memory location 0x2020 + 220
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 21
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	21 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 74
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	74 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 37
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	37 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 18
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	18 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 224
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	224 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 95 to $14 from memory location 0x2020 + 224
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 31
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	31 is equal to 31
+	PC: 60 --> 64
+Instruction: addi $19, $19, 1
+	Change $19 to 9
+	PC: 64 --> 68
+Instruction: bne $19, $0, finish
+	9 is not equal to 0
+	PC: 68 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 228
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	228 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 235 to $14 from memory location 0x2020 + 228
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 11
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	11 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 117
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	117 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 58
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	58 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 29
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	29 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 232
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	232 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 103 to $14 from memory location 0x2020 + 232
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 7
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	7 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 51
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	51 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 25
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	25 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 12
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	12 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 236
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	236 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 141 to $14 from memory location 0x2020 + 236
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 13
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	13 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 70
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	70 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 35
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	35 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 17
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	17 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 240
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	240 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 239 to $14 from memory location 0x2020 + 240
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 15
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	15 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 119
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	119 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 59
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	59 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 29
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	29 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 244
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	244 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 20 to $14 from memory location 0x2020 + 244
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 20
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	20 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 10
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	10 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 5
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	5 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 2
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	2 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 248
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	248 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 139 to $14 from memory location 0x2020 + 248
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 11
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	11 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 69
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	69 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 34
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	34 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 17
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	17 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 252
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	252 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 252 to $14 from memory location 0x2020 + 252
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 28
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	28 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 126
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	126 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 63
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	63 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 31
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	31 is equal to 31
+	PC: 108 --> 112
+Instruction: addi $19, $19, 1
+	Change $19 to 10
+	PC: 112 --> 116
+Instruction: bne $19, $0, finish
+	10 is not equal to 0
+	PC: 116 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 256
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	256 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 15 to $14 from memory location 0x2020 + 256
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 15
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	15 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 7
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	7 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 3
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	3 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 1
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	1 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 260
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	260 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 191 to $14 from memory location 0x2020 + 260
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 31
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	31 is equal to 31
+	PC: 60 --> 64
+Instruction: addi $19, $19, 1
+	Change $19 to 11
+	PC: 64 --> 68
+Instruction: bne $19, $0, finish
+	11 is not equal to 0
+	PC: 68 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 264
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	264 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 23 to $14 from memory location 0x2020 + 264
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 23
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	23 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 11
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	11 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 5
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	5 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 2
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	2 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 268
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	268 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 124 to $14 from memory location 0x2020 + 268
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 28
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	28 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 62
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	62 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 31
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	31 is equal to 31
+	PC: 92 --> 96
+Instruction: addi $19, $19, 1
+	Change $19 to 12
+	PC: 96 --> 100
+Instruction: bne $19, $0, finish
+	12 is not equal to 0
+	PC: 100 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 272
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	272 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 14 to $14 from memory location 0x2020 + 272
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 14
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	14 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 7
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	7 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 3
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	3 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 1
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	1 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 276
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	276 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 229 to $14 from memory location 0x2020 + 276
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 5
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	5 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 114
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	114 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 57
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	57 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 28
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	28 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 280
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	280 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 39 to $14 from memory location 0x2020 + 280
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 7
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	7 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 19
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	19 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 9
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	9 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 4
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	4 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 284
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	284 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 174 to $14 from memory location 0x2020 + 284
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 14
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	14 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 87
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	87 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 43
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	43 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 21
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	21 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 288
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	288 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 164 to $14 from memory location 0x2020 + 288
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 4
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	4 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 82
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	82 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 41
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	41 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 20
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	20 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 292
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	292 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 242 to $14 from memory location 0x2020 + 292
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 18
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	18 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 121
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	121 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 60
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	60 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 30
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	30 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 296
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	296 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 47 to $14 from memory location 0x2020 + 296
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 15
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	15 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 23
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	23 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 11
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	11 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 5
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	5 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 300
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	300 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 252 to $14 from memory location 0x2020 + 300
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 28
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	28 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 126
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	126 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 63
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	63 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 31
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	31 is equal to 31
+	PC: 108 --> 112
+Instruction: addi $19, $19, 1
+	Change $19 to 13
+	PC: 112 --> 116
+Instruction: bne $19, $0, finish
+	13 is not equal to 0
+	PC: 116 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 304
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	304 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 105 to $14 from memory location 0x2020 + 304
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 9
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	9 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 52
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	52 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 26
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	26 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 13
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	13 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 308
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	308 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 210 to $14 from memory location 0x2020 + 308
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 18
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	18 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 105
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	105 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 52
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	52 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 26
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	26 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 312
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	312 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 181 to $14 from memory location 0x2020 + 312
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 21
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	21 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 90
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	90 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 45
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	45 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 22
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	22 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 316
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	316 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 56 to $14 from memory location 0x2020 + 316
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 24
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	24 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 28
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	28 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 14
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	14 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 7
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	7 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 320
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	320 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 78 to $14 from memory location 0x2020 + 320
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 14
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	14 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 39
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	39 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 19
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	19 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 9
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	9 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 324
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	324 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 38 to $14 from memory location 0x2020 + 324
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 6
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	6 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 19
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	19 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 9
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	9 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 4
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	4 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 328
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	328 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 106 to $14 from memory location 0x2020 + 328
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 10
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	10 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 53
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	53 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 26
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	26 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 13
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	13 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 332
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	332 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 70 to $14 from memory location 0x2020 + 332
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 6
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	6 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 35
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	35 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 17
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	17 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 8
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	8 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 336
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	336 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 209 to $14 from memory location 0x2020 + 336
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 17
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	17 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 104
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	104 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 52
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	52 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 26
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	26 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 340
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	340 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 162 to $14 from memory location 0x2020 + 340
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 2
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	2 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 81
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	81 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 40
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	40 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 20
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	20 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 344
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	344 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 5 to $14 from memory location 0x2020 + 344
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 5
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	5 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 2
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	2 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 1
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	1 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 0
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	0 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 348
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	348 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 32 to $14 from memory location 0x2020 + 348
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 0
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	0 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 16
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	16 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 8
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	8 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 4
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	4 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 352
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	352 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 154 to $14 from memory location 0x2020 + 352
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 26
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	26 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 77
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	77 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 38
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	38 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 19
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	19 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 356
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	356 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 172 to $14 from memory location 0x2020 + 356
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 12
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	12 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 86
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	86 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 43
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	43 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 21
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	21 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 360
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	360 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 166 to $14 from memory location 0x2020 + 360
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 6
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	6 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 83
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	83 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 41
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	41 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 20
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	20 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 364
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	364 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 61 to $14 from memory location 0x2020 + 364
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 29
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	29 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 30
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	30 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 15
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	15 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 7
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	7 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 368
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	368 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 45 to $14 from memory location 0x2020 + 368
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 13
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	13 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 22
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	22 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 11
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	11 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 5
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	5 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 372
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	372 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 203 to $14 from memory location 0x2020 + 372
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 11
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	11 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 101
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	101 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 50
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	50 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 25
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	25 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 376
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	376 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 170 to $14 from memory location 0x2020 + 376
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 10
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	10 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 85
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	85 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 42
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	42 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 21
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	21 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 380
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	380 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 51 to $14 from memory location 0x2020 + 380
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 19
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	19 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 25
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	25 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 12
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	12 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 6
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	6 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 384
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	384 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 213 to $14 from memory location 0x2020 + 384
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 21
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	21 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 106
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	106 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 53
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	53 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 26
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	26 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 388
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	388 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 39 to $14 from memory location 0x2020 + 388
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 7
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	7 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 19
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	19 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 9
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	9 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 4
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	4 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 392
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	392 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 225 to $14 from memory location 0x2020 + 392
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 1
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	1 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 112
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	112 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 56
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	56 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 28
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	28 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 396
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	396 is not equal to 400
+	PC: 124 --> 52
+Instruction: lw $14, 0x2020($16)
+	Move 170 to $14 from memory location 0x2020 + 396
+	PC: 52 --> 56
+Instruction: andi $15, $14, 0x1F
+	Change $15 to 10
+	PC: 56 --> 60
+Instruction: bne $15, $21, skip1
+	10 is not equal to 31
+	PC: 60 --> 72
+Instruction: srl $15, $14, 1
+	Change $15 to 85
+	PC: 72 --> 76
+Instruction: bne $15, $21, skip2
+	85 is not equal to 31
+	PC: 76 --> 88
+Instruction: srl $15, $14, 2
+	Change $15 to 42
+	PC: 88 --> 92
+Instruction: bne $15, $21, skip3
+	42 is not equal to 31
+	PC: 92 --> 104
+Instruction: srl $15, $14, 3
+	Change $15 to 21
+	PC: 104 --> 108
+Instruction: bne $15, $21, finish
+	21 is not equal to 31
+	PC: 108 --> 120
+Instruction: addi $16, $16, 4
+	Change $16 to 400
+	PC: 120 --> 124
+Instruction: bne $16, $17, loopy
+	400 is equal to 400
+	PC: 124 --> 128
+Instruction: sw $19, 0x2008($0)
+	Move 13 to memory location 0x2008 + 0
+	PC: 128 --> 132
+ECE 366 Project 2
+Created by: Zhongy Chen, Chris Nyauchi, and Claire Chappee
+Output for Hash-MIPS-plus.asm
+****************************************************
+$0 --> 0
+$8 --> -98966682
+$9 --> 100
+$10 --> 170
+$11 --> 0
+$12 --> 4
+$13 --> 0
+$14 --> 170
+$15 --> 21
+$16 --> 400
+$17 --> 400
+$18 --> 0
+$19 --> 13
+$20 --> 0
+$21 --> 31
+$22 --> 0
+$23 --> 0
+pc --> 132
+hi --> 0
+lo --> 0
+****************************************************
+The memory contents of 0x2000 - 0x225C are:
+   0    0   13    0    0    0    0    0 
+ 142   81  205  154   52  216  173   33 
+ 110  196  133  210  241  223  227  244 
+ 124   32   46   22  141   77  174  114 
+  10   23  122   52   88  131  187  179 
+ 216  221   67  159  121   20  159  223 
+ 249  254    8  125  240  235  103   44 
+ 143  136   30  165  101  215  195  149 
+  95  235  103  141  239   20  139  252 
+  15  191   23  124   14  229   39  174 
+ 164  242   47  252  105  210  181   56 
+  78   38  106   70  209  162    5   32 
+ 154  172  166   61   45  203  170   51 
+ 213   39  225  170    0    0    0    0 
+   0    0    0    0    0    0    0    0 
+   0    0    0    0    0    0    0    0 
+   0    0    0    0    0    0    0    0 
+   0    0    0    0    0    0    0    0 
+   0    0    0    0    0    0    0    0 
+****************************************************
+Dynamic Instruction Count --> 1593

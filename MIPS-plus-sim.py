@@ -1,6 +1,9 @@
 # ECE 366 Project 2 Fall 2019
 # Group 7: Zhongy Chen, Chris Nyauchi, Claire Chappee
-import pprint
+
+instr_logging = True
+f = 0
+
 registers = {
         '$0': 0,
         '$8': 0,
@@ -43,15 +46,24 @@ def lui(options):
     registers[options[0]] = (int(options[1], 16 if (options[1].count('x')) else 10) << 16) | (registers[options[0]] & 0xFFFF)
     registers[options[0]] -= pow(2, 32) if ((registers[options[0]] >> 31) & 0x1 == 1) else 0
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('\tChange ' + options[0] + ' to ' + str(registers[options[0]]) + '\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def ori(options):
     registers[options[0]] = registers[options[1]] | int(options[2], 16 if (options[2].count('x')) else 10)
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('\tChange ' + options[0] + ' to ' + str(registers[options[0]]) + '\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def addi(options):
     registers[options[0]] = (registers[options[1]] + int(options[2], 16 if (options[2].count('x')) else 10)) & 0xFFFFFFFF
     registers[options[0]] -= pow(2, 32) if ((registers[options[0]] >> 31) & 0x1 == 1) else 0
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('\tChange ' + options[0] + ' to ' + str(registers[options[0]]) + '\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def multu(options):
     t1 = registers[options[0]] & 0xFFFFFFFF
@@ -62,67 +74,114 @@ def multu(options):
     registers['hi'] = (product >> 32) & 0xFFFFFFFF
     registers['hi'] -= (pow(2, 32) if ((registers['hi'] >> 31) & 0x1 == 1) else 0)
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('\tMultiply ' + str(registers[options[0]]) + ' and ' + str(registers[options[1]]) + '\n')
+        f.write('\tStore lower half (' + str(registers['lo']) + ') to register lo\n')
+        f.write('\tStore upper half (' + str(registers['hi']) + ') to register hi\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def mfhi(options):
     registers[options[0]] = registers['hi']
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('\tMove ' + str(registers['hi']) + ' to ' + options[0] + '\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def mflo(options):
     registers[options[0]] = registers['lo']
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('\tMove ' + str(registers['lo']) + ' to ' + options[0] + '\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def xor(options):
     registers[options[0]] = (registers[options[1]] ^ registers[options[2]]) & 0xFFFFFFFF
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('\tChange ' + options[0] + ' to ' + str(registers[options[0]]) + '\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def bne(options):
     if (registers[options[0]] == registers[options[1]]):
         registers['pc'] += 4
+        if (instr_logging):
+            f.write('\t' + str(registers[options[0]]) + ' is equal to ' + str(registers[options[1]]) + '\n')
+            f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
     else:
+        if (instr_logging):
+            f.write('\t' + str(registers[options[0]]) + ' is not equal to ' + str(registers[options[1]]) + '\n')
+            f.write('\tPC: ' + str(registers['pc']) + ' --> ' + str(labelDict[options[2]] << 2) + '\n')
         registers['pc'] = labelDict[options[2]] << 2
 
 def beq(options):
     if (registers[options[0]] == registers[options[1]]):
+        if (instr_logging):
+            f.write('\t' + str(registers[options[0]]) + ' is equal to ' + str(registers[options[1]]) + '\n')
+            f.write('\tPC: ' + str(registers['pc']) + ' --> ' + str(labelDict[options[2]] << 2) + '\n')
         registers['pc'] = labelDict[options[2]] << 2
     else:
         registers['pc'] += 4
+        if (instr_logging):
+            f.write('\t' + str(registers[options[0]]) + ' is not equal to ' + str(registers[options[1]]) + '\n')
+            f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def srl(options):
     registers[options[0]] = registers[options[1]] >> int(options[2], 16 if (options[2].count('x')) else 10)
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('\tChange ' + options[0] + ' to ' + str(registers[options[0]]) + '\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def srlv(options):
     registers[options[0]] = registers[options[1]] >> registers[options[2]]
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('\tChange ' + options[0] + ' to ' + str(registers[options[0]]) + '\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def andi(options):
     registers[options[0]] = registers[options[1]] & int(options[2], 16 if (options[2].count('x')) else 10)
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('\tChange ' + options[0] + ' to ' + str(registers[options[0]]) + '\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def sll(options):
     registers[options[0]] = (registers[options[1]] << int(options[2], 16 if (options[2].count('x')) else 10)) & 0xFFFFFFFF
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('\tChange ' + options[0] + ' to ' + str(registers[options[0]]) + '\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def sw(options):
     i = int(options[1], 16 if (options[1].count('x')) else 10) - 0x2000 + registers[options[2]]
     chunk = int(i / 4)
     memory[chunk] = registers[options[0]]
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('\tMove ' + str(registers[options[0]]) + ' to memory location ' + options[1] + ' + ' + str(registers[options[2]]) + '\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def lw(options):
     i = int(options[1], 16 if (options[1].count('x')) else 10) - 0x2000 + registers[options[2]]
     chunk = int(i / 4)
     registers[options[0]] = memory[chunk]
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('\tMove ' + str(registers[options[0]]) + ' to ' + options[0] + ' from memory location ' + options[1] + ' + ' + str(registers[options[2]]) + '\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def sb(options):
     i = int(options[1], 16 if (options[1].count('x')) else 10) - 0x2000 + registers[options[2]]
     chunk = int(i / 4)
     offset = i % 4
     toBeReplaced = memory[chunk] & (0xFF << offset * 8)
-    memory[chunk] = memory[chunk] ^ toBeReplaced ^ (registers[options[0]] << offset * 8)
+    memory[chunk] = memory[chunk] ^ toBeReplaced ^ ((registers[options[0]] & 0xFF) << offset * 8)
     memory[chunk] -= pow(2, 32) if ((memory[chunk] >> 31) & 0x1 == 1) else 0
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('\tMove ' + str(registers[options[0]] & 0xFF) + ' to memory location ' + options[1] + ' + ' + str(registers[options[2]]) + '\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def lb(options):
     i = int(options[1], 16 if (options[1].count('x')) else 10) - 0x2000 + registers[options[2]]
@@ -131,6 +190,9 @@ def lb(options):
     registers[options[0]] = (memory[chunk] & (0xFF << offset * 8)) >> (offset * 8)
     registers[options[0]] = (0xFFFFFF00 if (registers[options[0]] & 0x80 == 0x80) else 0x0) | registers[options[0]]
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('\tMove ' + str(registers[options[0]]) + ' to ' + options[0] + ' from memory location ' + options[1] + ' + ' + str(registers[options[2]]) + '\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
 
 def hash(options):
     a = registers[options[1]] & 0xFFFFFFFF
@@ -143,6 +205,11 @@ def hash(options):
     c = (a & 0xFFFF) ^ ((a >> 16) & 0xFFFF)
     registers[options[0]] = (c & 0xFF) ^ ((c >> 8) & 0xFF)
     registers['pc'] += 4
+    if (instr_logging):
+        f.write('*** Special Instruction ***\n')
+        f.write('\t' + options[0] + ' = H(' + options[1] + ', ' + options[2] + ')\n')
+        f.write('\t' + options[0] + ' = ' + str(registers[options[0]]) + '\n')
+        f.write('\tPC: ' + str(registers['pc'] - 4) + ' --> ' + str(registers['pc']) + '\n')
         
     
 
@@ -201,54 +268,128 @@ class Instruction:
         return self.str
 
 def main():
-    f = open("outputpy.txt","w+")
-    h = open("Hash-MIPS-default.asm","r")
-    f2 = open("outputasm.txt","w+")
-    h2 = open("testcase.asm","r")
-    f3 = open("outputplusasm.txt","w+")
+    global f
+    global registers
+    global memory
+    global labelDict
+    global instr_memory
+
+    f1 = open("output-test.txt","w+")
+    h1 = open("testcase.asm","r")
+    f2 = open("output-default.txt","w+")
+    h2 = open("Hash-MIPS-default.asm","r")
+    f3 = open("output-plus.txt","w+")
     h3 = open("Hash-MIPS-plus.asm","r")
-    asm = h.readlines() 
+
+    if (instr_logging == True):
+        f = f1
+    asm = h1.readlines() 
     initializeInstrMemory(instr_memory, labelDict, asm)
     instrCount = len(instr_memory)
     dynamInstrCount = 0
     while (registers['pc'] >> 2 < instrCount):
         asmLine = instr_memory[registers['pc'] >> 2]
         instr = Instruction(asmLine)
+        if (instr_logging == True):
+            f1.write('Instruction: ' + instr.toString() + '\n')
         instr.execute()
         dynamInstrCount += 1
+    #Testcase Output
+    f1.write('ECE 366 Project 2\n')
+    f1.write('Created by: Zhongy Chen, Chris Nyauchi, and Claire Chappee\n')
+    f1.write('Output for testcase.asm\n')
+    f1.write('****************************************************\n')
+    for key in registers:
+        f1.write(key + ' --> ' + str(registers[key]) + '\n')
+    f1.write('****************************************************\n')
+    f1.write('The memory contents of 0x2000 - 0x225C are:\n')
+    memOutputSize = 12
+    for i in range(0, 152):
+        if (i != 0 and i % 8 == 0):
+            f1.write('\n')
+        for j in range(0, memOutputSize - len(str(memory[i]))):
+            f1.write(' ')
+        f1.write(str(memory[i]) + ' ')
+    f1.write('\n****************************************************\n')
+    f1.write('Dynamic Instruction Count --> ' + str(dynamInstrCount))
+    #clear memory
+    for key in registers:
+        registers[key] = 0
+    memory = [0] * 1024
+    labels_dict = {}
+    instr_memory = []
+
+
+    if (instr_logging == True):
+            f = f2
+    asm = h2.readlines() 
+    initializeInstrMemory(instr_memory, labelDict, asm)
+    instrCount = len(instr_memory)
+    dynamInstrCount = 0
+    while (registers['pc'] >> 2 < instrCount):
+        asmLine = instr_memory[registers['pc'] >> 2]
+        instr = Instruction(asmLine)
+        if (instr_logging == True):
+            f2.write('Instruction: ' + instr.toString() + '\n')
+        instr.execute()
+        dynamInstrCount += 1
+    #Default Output
+    f2.write('ECE 366 Project 2\n')
+    f2.write('Created by: Zhongy Chen, Chris Nyauchi, and Claire Chappee\n')
+    f2.write('Output for Hash-MIPS-default.asm\n')
+    f2.write('****************************************************\n')
+    for key in registers:
+        f2.write(key + ' --> ' + str(registers[key]) + '\n')
+    f2.write('****************************************************\n')
+    f2.write('The memory contents of 0x2000 - 0x225C are:\n')
+    memOutputSize = 4
+    for i in range(0, 152):
+        if (i != 0 and i % 8 == 0):
+            f2.write('\n')
+        for j in range(0, memOutputSize - len(str(memory[i]))):
+            f2.write(' ')
+        f2.write(str(memory[i]) + ' ')
+    f2.write('\n****************************************************\n')
+    f2.write('Dynamic Instruction Count --> ' + str(dynamInstrCount))
+    #clear memory
+    for key in registers:
+        registers[key] = 0
+    memory = [0] * 1024
+    labels_dict = {}
+    instr_memory = []
     
-    print('ECE 366 Project 2')
-    print('Created by: Zhongy Chen, Chris Nyauchi, and Claire Chappee')
-    print('****************************************************')
-    print('The values in registers $8 - $23 are:')
-    print('$8', registers['$8'])
-    print('$9',registers['$9'])
-    print('$10',registers['$10'])
-    print('$11',registers['$11'])
-    print('$12',registers['$12'])
-    print('$13',registers['$13'])
-    print('$14',registers['$14'])
-    print('$15',registers['$15'])
-    print('$16',registers['$16'])
-    print('$17',registers['$17'])
-    print('$18',registers['$18'])
-    print('$19',registers['$19'])
-    print('$20',registers['$20'])
-    print('$21',registers['$21'])
-    print('$22',registers['$22'])
-    print('$23',registers['$23'])
-    print('lo',registers['lo'])
-    print('hi',registers['hi'])
-    print('pc',registers['pc'])
-    print('****************************************************')
-    print('The dynamic instruction count is:')
-    print(dynamInstrCount)
-    print('****************************************************')
-    print('The memory contents of 0x2000 - 0x2050 are:')
-    pprint.pprint(memory[0:199])
-    print('****************************************************')
 
-
+    if (instr_logging == True):
+        f = f3
+    asm = h3.readlines() 
+    initializeInstrMemory(instr_memory, labelDict, asm)
+    instrCount = len(instr_memory)
+    dynamInstrCount = 0
+    while (registers['pc'] >> 2 < instrCount):
+        asmLine = instr_memory[registers['pc'] >> 2]
+        instr = Instruction(asmLine)
+        if (instr_logging == True):
+            f3.write('Instruction: ' + instr.toString() + '\n')
+        instr.execute()
+        dynamInstrCount += 1
+    #Plus Default
+    f3.write('ECE 366 Project 2\n')
+    f3.write('Created by: Zhongy Chen, Chris Nyauchi, and Claire Chappee\n')
+    f3.write('Output for Hash-MIPS-plus.asm\n')
+    f3.write('****************************************************\n')
+    for key in registers:
+        f3.write(key + ' --> ' + str(registers[key]) + '\n')
+    f3.write('****************************************************\n')
+    f3.write('The memory contents of 0x2000 - 0x225C are:\n')
+    memOutputSize = 4
+    for i in range(0, 152):
+        if (i != 0 and i % 8 == 0):
+            f3.write('\n')
+        for j in range(0, memOutputSize - len(str(memory[i]))):
+            f3.write(' ')
+        f3.write(str(memory[i]) + ' ')
+    f3.write('\n****************************************************\n')
+    f3.write('Dynamic Instruction Count --> ' + str(dynamInstrCount))
 
 
 if __name__ == "__main__":
